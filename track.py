@@ -10,7 +10,7 @@ import csv
 import plot_csv
 
 
-time_sleep = 15 # Check every half hour
+time_sleep = 1800 # Check every half hour, ~ 1800 s
 
 def local_time(zone='Asia/Kolkata'):
 
@@ -50,7 +50,7 @@ def main():
         view_end = text.find('views</div>')
         numviews = text[view_start+30:view_end]
 
-        # aria-label="like this video along with 40,667 other people" 
+        # aria-label="like this video along with 40,667 other people"
         like_start = text.find('aria-label="like this video along with')
         like_end = text.find(' other people',like_start)
         numlikes =  text[like_start+38:like_end]
@@ -59,7 +59,7 @@ def main():
         dislike_end = text.find(' other people',dislike_start)
         numdislikes =  text[dislike_start+41:dislike_end]
 
-        # write into csv 
+        # write into csv
         writer = csv.writer(open("views.csv", "ab"), delimiter=',')
         writer.writerow([epoch-start_time, original_time, numviews.replace(",",""), numlikes.replace(",",""), numdislikes.replace(",","")])
         print epoch-start_time, original_time, numviews, numlikes, numdislikes
