@@ -25,7 +25,7 @@ def get_video(url):
         response = requests.get(url)
         assert response.status_code == 200, 'Wrong status code'
         #print response.content
-        with open("index.html", "wb") as f:
+        with open("scrap.html", "wb") as f:
             f.write(response.content)
 
         return response.content

@@ -4,6 +4,8 @@ from dateutil import parser
 import time
 import os.path
 
+interval = 4
+
 def plot_csv():
 
     if os.path.isfile("view_graph.png") :
@@ -12,12 +14,12 @@ def plot_csv():
 
     with open('views.csv', 'r') as f:
         data = list(reader(f))
-    
-    timer = [int(i[0]) for i in data[0::]]
-    dater = [i[1] for i in data[0::]]
-    views = [i[2] for i in data[0::]]
-    likes = [i[3] for i in data[0::]]
-    dislikes = [i[4] for i in data[0::]]
+
+    timer = [int(i[0]) for i in data[0::interval]]# alternate rows
+    dater = [i[1] for i in data[0::interval]]
+    views = [i[2] for i in data[0::interval]]
+    likes = [i[3] for i in data[0::interval]]
+    dislikes = [i[4] for i in data[0::interval]]
 
     # time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1347517370))
     plt.plot(timer, views, label="Views")
