@@ -4,7 +4,7 @@ from dateutil import parser
 import time
 import os.path
 
-interval = 4
+interval = 20
 
 def plot_csv():
 

@@ -6,7 +6,7 @@ Track the views, likes and dislikes of this viral [video](https://www.youtube.co
 
 So, every once a while, the bot will check the stats, fill the csv, plot the image and save it, and go to sleep.
 
-The status can be viewed live at https://cse.iitkgp.ac.in/~hknarendra/Shape-of-you/. 
+The status can be viewed live at http://cse.iitkgp.ac.in/~hknarendra/Shape-of-you/. 
 
 Sample run for 44 hours:
 
