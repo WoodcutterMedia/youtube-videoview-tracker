@@ -35,7 +35,7 @@ def get_video(url):
 
 def main():
 
-    url = "https://www.youtube.com/watch?v=dTMLTCJzYGM" # url here
+    url = "https://www.youtube.com/watch?v=ym4EJQ7XORk" # url here
     start_time = calendar.timegm(time.gmtime()) - 640 # cheap hacks
     start_time = 0
     while(1):
