@@ -1,5 +1,6 @@
 from csv import reader
 import matplotlib.pyplot as plt
+plt.switch_backend('agg')
 from dateutil import parser
 import time
 import os.path
