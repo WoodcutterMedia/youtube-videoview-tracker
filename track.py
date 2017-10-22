@@ -8,7 +8,7 @@ from datetime import datetime
 from pytz import timezone
 import csv
 import plot_csv
-
+import sys
 
 time_sleep = 1800 # Check every half hour, ~ 1800 s
 
